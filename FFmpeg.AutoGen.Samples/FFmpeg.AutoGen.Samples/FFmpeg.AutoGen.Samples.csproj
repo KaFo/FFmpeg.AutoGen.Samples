@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\FFmpeg\bin\x64\avcodec-60.dll">
+        <Link>avcodec-60.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\..\FFmpeg\bin\x64\avdevice-60.dll">
+        <Link>avdevice-60.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\..\FFmpeg\bin\x64\avfilter-9.dll">
+        <Link>avfilter-9.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\..\FFmpeg\bin\x64\avformat-60.dll">
+        <Link>avformat-60.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\..\FFmpeg\bin\x64\avutil-58.dll">
+        <Link>avutil-58.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\..\FFmpeg\bin\x64\postproc-57.dll">
+        <Link>postproc-57.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\..\FFmpeg\bin\x64\swresample-4.dll">
+        <Link>swresample-4.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\..\FFmpeg\bin\x64\swscale-7.dll">
+        <Link>swscale-7.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="..\TestPic.jpg">
+        <Link>TestPic.jpg</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FFmpeg.AutoGen.Bindings.DynamicallyLoaded" Version="6.0.0.2" />
+    </ItemGroup>
+
+</Project>
